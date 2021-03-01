@@ -1,5 +1,6 @@
 import React from 'react';
 import Feedback from './Feedback/Feedback';
+import Footer from './Footer/Footer';
 import BrandLogo from './Hero/BrandLogo';
 import Hero from './Hero/Hero';
 import './Lending.css'
@@ -17,6 +18,8 @@ const Lending = () => {
             <Portfolio />
             <br/>
             <Feedback />
+            <br/>
+            <Footer />
         </div>
     );
 };
