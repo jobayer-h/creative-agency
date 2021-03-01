@@ -8,19 +8,19 @@ const BrandLogo = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-2 col-sm-2">
                     <img className="company-logo" src={google} alt="" />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 col-sm-2">
                     <img className="company-logo" src={uber} alt="" />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 col-sm-2">
                     <img className="company-logo" src={airbnb} alt="" />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 col-sm-2">
                     <img className="company-logo" src={netflix} alt="" />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 col-sm-2">
                     <img className="company-logo" src={slack} alt="" />
                 </div>
             </div>

@@ -23,6 +23,12 @@
   border-bottom: 5px solid #7AB259;
 }
 .company-logo{
-  width: 100%;
+  width: 10vw;
   margin: 0 auto;
+}
+#shape {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #FBD062;
+  border-right: 97vw solid transparent;
 }

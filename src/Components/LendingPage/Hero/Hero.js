@@ -21,7 +21,9 @@ const Hero = () => {
                     </div>
                 </section>
                 
+                
             </div>
+            
         </div>
 
     );
