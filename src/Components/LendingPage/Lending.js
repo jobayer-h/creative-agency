@@ -1,4 +1,5 @@
 import React from 'react';
+import Feedback from './Feedback/Feedback';
 import BrandLogo from './Hero/BrandLogo';
 import Hero from './Hero/Hero';
 import './Lending.css'
@@ -14,6 +15,8 @@ const Lending = () => {
             <br/><br/>
             <Services />
             <Portfolio />
+            <br/>
+            <Feedback />
         </div>
     );
 };
