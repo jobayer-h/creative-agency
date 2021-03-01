@@ -1,22 +1,32 @@
+import { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import './App.css';
 import Lending from './Components/LendingPage/Lending';
+import Login from "./Components/Login/Login";
+
+export const userContext = createContext();
 
 function App() {
+
+  const [logedInUser, setLogedInUser] = useState({});
+
   return (
-    <Router>
-      <Switch>
-        <Route path="/">
-          <Lending />
-        </Route>
-        
-      </Switch>
-  </Router>
+    <userContext.Provider value={[logedInUser, setLogedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Lending />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+        </Switch>
+      </Router>
+    </userContext.Provider>
   );
 }
 

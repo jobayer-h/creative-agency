@@ -26,7 +26,7 @@ const navbar = () => {
                             <Link class="nav-link" to='/'>Contact Us</Link>
                         </li>
                         <li class="nav-item mx-4">
-                            <button className="btn btn-brand"><Link class="login-btn" to='/'>Login</Link></button>
+                            <button className="btn btn-brand"><Link class="login-btn" to='/login'>Login</Link></button>
                         </li>
                     </ul>
                 </div>

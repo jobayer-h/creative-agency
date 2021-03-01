@@ -1,0 +1,21 @@
+.login-page{
+    height: 100vh;
+}
+.login-container{
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgb(122, 122, 122);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+}
+.branding{
+    width: 150px;
+    margin: 50px auto;
+}
+.branding img{
+    width: 100%;
+    text-align: center;
+}
