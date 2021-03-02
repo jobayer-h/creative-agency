@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { userContext, UserContext } from '../../App';
+import { userContext} from '../../App';
 
 const PriveteRoute = ({ children, ...rest }) => {
     const [loggedInUser, setLoggedInUser] = useContext(userContext)
