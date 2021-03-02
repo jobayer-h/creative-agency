@@ -5,7 +5,13 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
+import AddService from "./Components/Dashbord/AddService";
 import Dashboard from "./Components/Dashbord/Dashboard";
+import MakeAdmin from "./Components/Dashbord/MakeAdmin";
+import OrderForm from "./Components/Dashbord/OrderForm";
+import OrderItem from "./Components/Dashbord/OrderItem";
+import OrderList from "./Components/Dashbord/OrderList";
+import ReviewForm from "./Components/Dashbord/ReviewForm";
 import Lending from './Components/LendingPage/Lending';
 import Login from "./Components/Login/Login";
 import PriveteRoute from "./Components/Login/PrivateRoute";
@@ -26,8 +32,23 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/dash">
-            <Dashboard />
+          <Route path="/dashbord/order">
+            <Dashboard page={'Order'} component={OrderForm} />
+          </Route>
+          <Route path="/dashbord/service">
+            <Dashboard page={'Service'} component={OrderItem} />            
+          </Route>
+          <Route path="/dashbord/review">
+            <Dashboard page={'Review'} component={ReviewForm} />
+          </Route>
+          <Route path="/dashbord/addadmin">
+            <Dashboard page={'Make Admin'} component={MakeAdmin} />
+          </Route>
+          <Route path="/dashbord/addservice">
+            <Dashboard page={'Add Service'} component={AddService} />
+          </Route>
+          <Route path="/dashbord/allservice">
+            <Dashboard page={'Services List'} component={OrderList} />
           </Route>
           {/* <PriveteRoute path="/order">
           </PriveteRoute> */}

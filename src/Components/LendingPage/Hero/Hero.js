@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import heroimg from './../../../resorces/logos/Frame.png'
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -14,16 +15,18 @@ const Hero = () => {
                     Brand To The<br />
                     Next Level</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat </p>
-                        <button className="btn btn-brand">Hire Us</button>
+                        <Link to="/dashbord/order" style={{ textDecoration: 'none' }}>
+                            <button className="btn btn-brand">Hire Us</button>
+                        </Link>
                     </div>
                     <div className="col-md-7">
                         <img className="img-fluid" src={heroimg} alt="" />
                     </div>
                 </section>
-                
-                
+
+
             </div>
-            
+
         </div>
 
     );

@@ -1,11 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Sidebar from './Sidebar';
 import DashbordHeading from './DashbordHeading';
-import OrderForm from './OrderForm'
 import './Dashbord.css'
-const Dashboard = () => {
+const Dashboard = (props) => {
+    const pageName = props.page;
     return (
         <section className="container-fluid ">
             <div className="row dashboard-section">
@@ -13,9 +11,11 @@ const Dashboard = () => {
                 <Sidebar />
                 </div>
                 <div className="col-md-10">
-                    <DashbordHeading />
+                    <DashbordHeading name={pageName}/>
                     <div className="canvas">
-                        <OrderForm />
+                        {
+                            <props.component />
+                        }
                     </div>
                 </div>
             </div>
