@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Review = ({data}) => {
+const Review = ({data,img}) => {
     return (
         <div className="col-md-4">
             <div className="service-box text-center">
-                <img src={data.img} alt=""/>
-                <h3>{data.name}</h3>
-                <p>{data.comment}</p>
+                <img src={img} alt=""/>
+                <h3>{data.username}</h3>
+                <small className="text-marking">{data.company}</small>
+                <p>{data.description}</p>
             </div>
         </div>
     );
