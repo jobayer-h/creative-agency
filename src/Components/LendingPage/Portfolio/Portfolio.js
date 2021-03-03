@@ -10,7 +10,7 @@ import imageThree from './../../../resorces/carousel-3.png'
 
 const Portfolio = () => {
     return (
-        <section className="portfolio">
+        <section className="portfolio" id="portfolio">
             <div className="container">
                 <br/><br/>
                 <h2 className="text-center my-5"><span style={{ color: '#fff' }}>Here are some of our </span><span className="text-marking">Works</span></h2>

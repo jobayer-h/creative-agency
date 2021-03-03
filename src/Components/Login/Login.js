@@ -7,6 +7,8 @@ import "firebase/auth";
 import "firebase/firestore";
 import { firebaseConfig } from '../../firebaseConfig';
 import { userContext } from '../../App';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
@@ -43,9 +45,14 @@ const Login = () => {
                 <div className="row">
                     <div className="login-container">
                         <div>
-                            <h1>Login With</h1>
-                            <button onClick={handleGoogleSignIn}>Continue With Google</button>
-                            <p>Don’t have an account? <span onClick={handleGoogleSignIn}>Create an account</span></p>
+                            <h3>Login With</h3>
+                            <br/>
+                            <div className="google-btn" onClick={handleGoogleSignIn}>
+                                <FontAwesomeIcon className="icon" icon={faGoogle} />
+                                <span>Continue With Google</span>
+                            </div>
+                            <br/>
+                            <p>Don’t have an account? <span className="create-account" onClick={handleGoogleSignIn}>Create an account</span></p>
                         </div>
                     </div>
                 </div>
