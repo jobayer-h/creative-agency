@@ -32,26 +32,25 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/dashbord/order">
+          
+          <PriveteRoute path="/dashbord/order">
             <Dashboard page={'Order'} component={OrderForm} />
-          </Route>
-          <Route path="/dashbord/service">
+          </PriveteRoute>
+          <PriveteRoute path="/dashbord/service">
             <Dashboard page={'Service'} component={OrderItem} />            
-          </Route>
-          <Route path="/dashbord/review">
+          </PriveteRoute>
+          <PriveteRoute path="/dashbord/review">
             <Dashboard page={'Review'} component={ReviewForm} />
-          </Route>
-          <Route path="/dashbord/addadmin">
+          </PriveteRoute>
+          <PriveteRoute path="/dashbord/addadmin">
             <Dashboard page={'Make Admin'} component={MakeAdmin} />
-          </Route>
-          <Route path="/dashbord/addservice">
+          </PriveteRoute>
+          <PriveteRoute path="/dashbord/addservice">
             <Dashboard page={'Add Service'} component={AddService} />
-          </Route>
-          <Route path="/dashbord/allservice">
+          </PriveteRoute>
+          <PriveteRoute path="/dashbord/allservice">
             <Dashboard page={'Services List'} component={OrderList} />
-          </Route>
-          {/* <PriveteRoute path="/order">
-          </PriveteRoute> */}
+          </PriveteRoute>
         </Switch>
       </Router>
     </userContext.Provider>

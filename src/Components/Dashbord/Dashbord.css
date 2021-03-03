@@ -24,3 +24,20 @@
 .dashboard-section{
     height:100vh;
 }
+.component-sizeing{
+    padding: 50px 30px;
+}
+.icon{
+    height: 50px;
+}
+.icon img{
+    height: 100%;
+}
+.order-box{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 10px;
+    height: 300px;
+    overflow-y: scroll;
+}

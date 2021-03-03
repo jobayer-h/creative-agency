@@ -8,14 +8,16 @@ const Dashboard = (props) => {
         <section className="container-fluid ">
             <div className="row dashboard-section">
                 <div className="col-md-2">
-                <Sidebar />
+                    <Sidebar />
                 </div>
                 <div className="col-md-10">
-                    <DashbordHeading name={pageName}/>
+                    <DashbordHeading name={pageName} />
                     <div className="canvas">
-                        {
-                            <props.component />
-                        }
+                        <div className="component-sizeing">
+                            {
+                                <props.component />
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
