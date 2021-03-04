@@ -2,7 +2,7 @@ import React from 'react';
 
 const OrderForm = () => {
     return (
-        <form action="http://localhost:4000/placeorder" method="post">
+        <form action="https://creative-agency-jobayer.herokuapp.com/placeorder" method="post">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <input type="text" class="form-control" name="username" id="" placeholder="Enter your Name" />

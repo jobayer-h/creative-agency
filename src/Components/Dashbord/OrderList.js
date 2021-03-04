@@ -4,7 +4,7 @@ import AdminTable from './AdminTable';
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/allordersadmin')
+        fetch('https://creative-agency-jobayer.herokuapp.com/allordersadmin')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])

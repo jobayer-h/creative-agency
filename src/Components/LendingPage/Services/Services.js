@@ -6,7 +6,7 @@ import serviceImg3 from './../../../resorces/icons/service3.png'
 const Services = () => {
     const [service , setService] =useState([]);
     useEffect(()=>{
-        fetch('http://localhost:4000/services')
+        fetch('https://creative-agency-jobayer.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setService(data))
     },[]);

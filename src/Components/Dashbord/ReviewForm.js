@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReviewForm = () => {
     return (
-        <form action="http://localhost:4000/submitreview" method="post">
+        <form action="https://creative-agency-jobayer.herokuapp.com/submitreview" method="post">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <input type="text" class="form-control" name="username" id="" placeholder="Your name" />

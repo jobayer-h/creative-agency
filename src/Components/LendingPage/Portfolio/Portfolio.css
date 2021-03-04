@@ -2,6 +2,18 @@
     background:#111430;
 }
 
-.portfolio-img{
-    width: 30vw;
+/* .portfolio-img{
+    height: 100px;
+    width: 200px;
+    margin-right: 20px;
+} */
+.swiper-slide{
+    width: 28vw !important;
+    overflow: hidden;
+}
+.swiper-slide img{
+    width: 100%;
+}
+.swiper-pagination-bullet-active{
+    background: #FBD062 !important;
 }
