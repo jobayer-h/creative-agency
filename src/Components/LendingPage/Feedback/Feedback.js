@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Review from './Review';
-import people1 from './../../../resorces/customer-1.png'
+import userLogo from './../../../resorces/icons/user.svg'
 const Feedback = () => {
 
     const [review, setReview] = useState([]);
@@ -15,7 +15,7 @@ const Feedback = () => {
             <h2 className="text-center my-5">Clients <span className="text-marking">Feedback</span></h2>
             <div className="row my-5">
                 {
-                    review.map(review => <Review key={review._id} img={people1} data={review}></Review>)
+                    review.map(review => <Review key={review._id} img={userLogo} data={review}></Review>)
                 }
             </div>
         </div>
