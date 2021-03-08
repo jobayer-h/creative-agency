@@ -15,11 +15,13 @@ import ReviewForm from "./Components/Dashbord/ReviewForm";
 import Lending from './Components/LendingPage/Lending';
 import Login from "./Components/Login/Login";
 import PriveteRoute from "./Components/Login/PrivateRoute";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const userContext = createContext();
 
 function App() {
-
+  AOS.init();
   const [logedInUser, setLogedInUser] = useState({});
 
   return (
@@ -32,12 +34,12 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          
+
           <PriveteRoute path="/dashbord/order">
             <Dashboard page={'Order'} component={OrderForm} />
           </PriveteRoute>
           <PriveteRoute path="/dashbord/service">
-            <Dashboard page={'Service'} component={OrderItem} />            
+            <Dashboard page={'Service'} component={OrderItem} />
           </PriveteRoute>
           <PriveteRoute path="/dashbord/review">
             <Dashboard page={'Review'} component={ReviewForm} />

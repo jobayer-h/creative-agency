@@ -6,11 +6,15 @@ const Footer = () => {
             <br /><br />
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div data-aos="fade-right"
+                        data-aos-duration="1000"
+                        data-aos-easing="linear" className="col-md-6">
                         <h1>Let us handle your project, professionally.</h1>
                         <p>With well written codes, we build amazing apps for all platforms, mobile and web apps in general.</p>
                     </div>
-                    <div className="col-md-6">
+                    <div data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-easing="linear" className="col-md-6">
                         <form action="">
                             <input class="form-control" type="email" placeholder="Email" name="email" id="" />
                             <br />
@@ -23,7 +27,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <br /><br /><br />
-                <p className="text-center">copyright Jobayer H. 2021</p>
+                <p className="text-center mb-0">copyright Jobayer H. 2021</p>
             </div>
         </div>
     );

@@ -8,9 +8,12 @@ const Hero = () => {
         <div className="y-bg">
             <div className="container">
                 <Navbar></Navbar>
-
+                <br /><br /><br />
                 <section className="row">
-                    <div className="col-md-5">
+                    <div data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-duration="1000"
+                        data-aos-easing="linear" className="col-md-5">
                         <h1>Let’s Grow Your<br />
                     Brand To The<br />
                     Next Level</h1>
@@ -19,7 +22,10 @@ const Hero = () => {
                             <button className="btn btn-brand">Hire Us</button>
                         </Link>
                     </div>
-                    <div className="col-md-7">
+                    <div data-aos="fade-left"
+                        data-aos-offset="300"
+                        data-aos-duration="1000"
+                        data-aos-easing="linear" className="col-md-7">
                         <img className="img-fluid" src={heroimg} alt="" />
                     </div>
                 </section>

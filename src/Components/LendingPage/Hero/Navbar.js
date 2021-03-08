@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../../resorces/logos/logo.png'
-const navbar = () => {
+import { Twirl as Hamburger } from 'hamburger-react'
+const Navbar = () => {
+    const [isOpen, setOpen] = useState(false)
+
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -9,7 +12,8 @@ const navbar = () => {
                     <img class="main-logo" src={logo} alt=""/>
                 </Link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    
+                    <Hamburger toggled={isOpen} toggle={setOpen} />
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav ml-auto">
@@ -35,4 +39,4 @@ const navbar = () => {
     );
 };
 
-export default navbar;
+export default Navbar;

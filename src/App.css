@@ -32,3 +32,16 @@
   border-top: 100px solid #FBD062;
   border-right: 97vw solid transparent;
 }
+.navbar-toggler{
+  border: none;
+}
+.hero-logos{
+  width: 90vw;
+}
+.brand-container {
+  margin: 0 5px;
+}
+
+.brand-container img {
+  width: 100%;
+}
