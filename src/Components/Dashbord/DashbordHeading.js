@@ -9,7 +9,7 @@ const DashbordHeading = ({name}) => {
                 <h5>{name}</h5>
             </div>
             <div>
-                <h5><span className="text-marking" >Welcome,</span>  {logedInUser.displayName}</h5>
+                <h5><span className="text-marking" >Welcome,</span>  {logedInUser.displayName || sessionStorage.getItem('user')}</h5>
             </div>
         </div>
     );

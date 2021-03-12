@@ -1,6 +1,17 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_4o7d5ay', 'template_gonw7ag', e.target, 'user_Zs2bMecKtP9m88IjMAhBI')
+          .then((result) => {
+              alert('Success!')
+          }, (error) => {
+              console.log(error.text);
+          });
+      }
     return (
         <div className="y-bg" id="contact">
             <br /><br />
@@ -15,7 +26,7 @@ const Footer = () => {
                     <div data-aos="fade-left"
                         data-aos-duration="1000"
                         data-aos-easing="linear" className="col-md-6">
-                        <form action="">
+                        <form onSubmit={sendEmail} action="">
                             <input class="form-control" type="email" placeholder="Email" name="email" id="" />
                             <br />
                             <input class="form-control" type="text" name="name" placeholder="Name / Company Name" id="" />

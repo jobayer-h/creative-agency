@@ -8,6 +8,9 @@ const Navbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const handleLogOut = () => {
         setLoggedInUser({});
+        sessionStorage.removeItem('user');
+        sessionStorage.removeItem('email');
+        alert('Log Outt Success');
     }
     return (
         <div>
@@ -28,14 +31,18 @@ const Navbar = () => {
                             <a class="nav-link" href="#portfolio">Our Portfolio</a>
                         </li>
                         <li class="nav-item mx-4">
-                            <Link class="nav-link" to='/'>Our Team</Link>
+                            {
+                                loggedInUser.email || sessionStorage.getItem('user')?
+                                <Link class="nav-link" to='/dashbord/order'>Dashboard</Link>:
+                                <Link class="nav-link" to='/'>Our Team</Link>
+                            }
                         </li>
                         <li class="nav-item mx-4">
                             <a class="nav-link" href="#contact">Contact Us</a>
                         </li>
                         <li class="nav-item mx-4">
                             {
-                                loggedInUser.email?
+                                loggedInUser.email || sessionStorage.getItem('user')?
                                 <button className="btn btn-brand"><Link onClick={handleLogOut} class="login-btn">Log Out</Link></button>
                                 :
                                 <button className="btn btn-brand"><Link class="login-btn" to='/login'>Log In</Link></button>

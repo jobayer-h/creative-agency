@@ -27,7 +27,8 @@ const Login = () => {
                 const user = result.user;
                 setLogedInUser(user);
                 history.replace(from);
-                console.log(logedInUser);
+                sessionStorage.setItem('user', user.displayName)
+                sessionStorage.setItem('email', user.email)
             }).catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);

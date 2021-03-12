@@ -23,6 +23,7 @@ export const userContext = createContext();
 function App() {
   AOS.init();
   const [logedInUser, setLogedInUser] = useState({});
+  console.log(sessionStorage.getItem('user'));
 
   return (
     <userContext.Provider value={[logedInUser, setLogedInUser]}>

@@ -7,7 +7,7 @@ const OrderItem = () => {
     const [myOrder, setMyOrders] = useState([])
 console.log(logedInUser);
     useEffect(() => {
-        fetch('https://creative-agency-jobayer.herokuapp.com/allorders?email='+logedInUser.email)
+        fetch('https://creative-agency-jobayer.herokuapp.com/allorders?email='+sessionStorage.getItem('email'))
         .then(res => res.json())
         .then(data => setMyOrders(data))
     },[])
