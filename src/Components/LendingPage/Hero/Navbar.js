@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../../resorces/logos/logo.png'
 import { Twirl as Hamburger } from 'hamburger-react'
+import { userContext } from '../../../App';
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false)
-
+    const [loggedInUser, setLoggedInUser] = useContext(userContext);
+    const handleLogOut = () => {
+        setLoggedInUser({});
+    }
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -30,7 +34,12 @@ const Navbar = () => {
                             <a class="nav-link" href="#contact">Contact Us</a>
                         </li>
                         <li class="nav-item mx-4">
-                            <button className="btn btn-brand"><Link class="login-btn" to='/login'>Login</Link></button>
+                            {
+                                loggedInUser.email?
+                                <button className="btn btn-brand"><Link onClick={handleLogOut} class="login-btn">Log Out</Link></button>
+                                :
+                                <button className="btn btn-brand"><Link class="login-btn" to='/login'>Log In</Link></button>
+                            }
                         </li>
                     </ul>
                 </div>

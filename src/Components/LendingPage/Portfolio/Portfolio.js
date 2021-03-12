@@ -33,7 +33,7 @@ const Portfolio = () => {
                     pagination={{ clickable: true }}
                     effect="coverflow"
                     onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    onSwiper={(swiper) => console.log('swiper')}
                 >
                     <SwiperSlide>
                         <img src={imageOne} alt="" />
