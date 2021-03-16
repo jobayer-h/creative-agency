@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Spiner from '../LendingPage/Services/Spiner';
 import AdminTable from './AdminTable';
 
 const OrderList = () => {
@@ -23,7 +24,10 @@ const OrderList = () => {
                 <tbody>
                     
                     {
+                        orders.length > 0 ?
                         orders.map(order => <AdminTable data={order} />)
+                        :
+                        <Spiner />
                     }
 
                 </tbody>

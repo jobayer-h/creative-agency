@@ -1,25 +1,26 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { userContext } from '../../App';
+import React, {useEffect, useState } from 'react';
+import Spiner from '../LendingPage/Services/Spiner';
 import OrderBox from './OrderBox';
 
 const OrderItem = () => {
-    const [logedInUser, setLogedInUser] = useContext(userContext);
-    const [myOrder, setMyOrders] = useState([])
-console.log(logedInUser);
+    const [myOrder, setMyOrders] = useState([]);
     useEffect(() => {
-        fetch('https://creative-agency-jobayer.herokuapp.com/allorders?email='+sessionStorage.getItem('email'))
-        .then(res => res.json())
-        .then(data => setMyOrders(data))
-    },[])
-    
+        fetch('https://creative-agency-jobayer.herokuapp.com/allorders?email=' + sessionStorage.getItem('email'))
+            .then(res => res.json())
+            .then(data => setMyOrders(data))
+    }, [])
+
     return (
         <div>
             <div className="row">
                 {
-                myOrder.map(order => <OrderBox data={order} />)
-            }
+                    myOrder.length > 0 ?
+                    myOrder.map(order => <OrderBox data={order} />)
+                    :
+                    <Spiner />
+                }
             </div>
-            
+
         </div>
     );
 };

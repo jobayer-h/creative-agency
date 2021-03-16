@@ -3,6 +3,7 @@ import { Redirect, Route } from 'react-router-dom';
 import { userContext} from '../../App';
 
 const PriveteRoute = ({ children, ...rest }) => {
+  // eslint-disable-next-line
     const [loggedInUser, setLoggedInUser] = useContext(userContext)
     return (
         <Route

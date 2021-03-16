@@ -13,6 +13,7 @@ if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 const Login = () => {
+    // eslint-disable-next-line
     const [logedInUser, setLogedInUser] = useContext(userContext);
     const history = useHistory();
     const location = useLocation();

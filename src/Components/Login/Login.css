@@ -22,7 +22,7 @@
 .google-btn{
     border: 2px solid rgb(195, 192, 192);
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     border-radius: 20px;
     cursor: pointer;
 }
