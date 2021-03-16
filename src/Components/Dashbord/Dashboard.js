@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import DashbordHeading from './DashbordHeading';
 import './Dashbord.css'
 const Dashboard = (props) => {
+    document.title ="Creative Agency Dashboard"
     const pageName = props.page;
     return (
         <section className="container-fluid ">

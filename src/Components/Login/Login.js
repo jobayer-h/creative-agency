@@ -13,6 +13,7 @@ if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 const Login = () => {
+    document.title ="Creative Agency Login"
     // eslint-disable-next-line
     const [logedInUser, setLogedInUser] = useContext(userContext);
     const history = useHistory();

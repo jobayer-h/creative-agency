@@ -7,6 +7,7 @@ import './Lending.css'
 import Portfolio from './Portfolio/Portfolio';
 import Services from './Services/Services';
 const Lending = () => {
+    document.title ="Creative Agency"
     return (
         <div>
             <Hero></Hero>
