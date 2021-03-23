@@ -13,30 +13,28 @@ if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 const Login = () => {
-    document.title ="Creative Agency Login"
+    document.title = "Creative Agency Login"
     // eslint-disable-next-line
     const [logedInUser, setLogedInUser] = useContext(userContext);
     const history = useHistory();
     const location = useLocation();
-    let { from } = location.state || { from: { pathname: "/" } };
+    let { from } = location.state || { from: { pathname: "/" } }; 
 
-    const handleGoogleSignIn = () => {
+    const HandleGoogleSignIn = () => {
         const googleProvider = new firebase.auth.GoogleAuthProvider();
-
         firebase.auth()
             .signInWithPopup(googleProvider)
             .then((result) => {
                 const user = result.user;
                 setLogedInUser(user);
                 history.replace(from);
-                sessionStorage.setItem('user', user.displayName)
-                sessionStorage.setItem('email', user.email)
             }).catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);
             });
-    }
 
+    }
+ 
     return (
         <section className="login-page">
             <div className="container">
@@ -49,13 +47,13 @@ const Login = () => {
                     <div className="login-container">
                         <div>
                             <h3>Login With</h3>
-                            <br/>
-                            <div className="google-btn" onClick={handleGoogleSignIn}>
+                            <br />
+                            <div className="google-btn" onClick={HandleGoogleSignIn}>
                                 <FontAwesomeIcon className="icon" icon={faGoogle} />
                                 <span>Continue With Google</span>
                             </div>
-                            <br/>
-                            <p>Don’t have an account? <span className="create-account" onClick={handleGoogleSignIn}>Create an account</span></p>
+                            <br />
+                            <p>Don’t have an account? <span className="create-account" onClick={HandleGoogleSignIn}>Create an account</span></p>
                         </div>
                     </div>
                 </div>

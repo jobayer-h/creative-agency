@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 import logo from './../../../resorces/logos/logo.png'
 import { Twirl as Hamburger } from 'hamburger-react'
 import { userContext } from '../../../App';
+import firebase from "firebase/app";
+import "firebase/auth";
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false)
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const handleLogOut = () => {
-        setLoggedInUser({});
-        sessionStorage.removeItem('user');
-        sessionStorage.removeItem('email');
-        alert('Log Outt Success');
+        firebase.auth().signOut().then(() => {
+            window.location.reload()
+          }).catch((error) => {
+            console.log(error);
+          });
     }
     return (
         <div>
@@ -32,7 +35,7 @@ const Navbar = () => {
                         </li>
                         <li class="nav-item mx-4">
                             {
-                                loggedInUser.email || sessionStorage.getItem('user')?
+                                firebase.auth().currentUser?
                                 <Link class="nav-link" to='/dashbord/order'>Dashboard</Link>:
                                 <Link class="nav-link" to='/'>Our Team</Link>
                             }
@@ -42,7 +45,7 @@ const Navbar = () => {
                         </li>
                         <li class="nav-item mx-4">
                             {
-                                loggedInUser.email || sessionStorage.getItem('user')?
+                                firebase.auth().currentUser?
                                 <button className="btn btn-brand"><Link onClick={handleLogOut} class="login-btn">Log Out</Link></button>
                                 :
                                 <button className="btn btn-brand"><Link class="login-btn" to='/login'>Log In</Link></button>

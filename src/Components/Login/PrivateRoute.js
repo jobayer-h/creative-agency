@@ -1,15 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { userContext} from '../../App';
-
+import firebase from "firebase/app";
+import "firebase/auth";
 const PriveteRoute = ({ children, ...rest }) => {
-  // eslint-disable-next-line
-    const [loggedInUser, setLoggedInUser] = useContext(userContext)
     return (
         <Route
             {...rest}
             render={({ location }) =>
-            loggedInUser.email || sessionStorage.getItem('user') ? (children) : (
+            firebase.auth().currentUser ? (children) : (
             
             <Redirect
             to={{

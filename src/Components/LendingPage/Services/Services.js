@@ -5,7 +5,7 @@ import Spiner from './Spiner';
 const Services = () => {
     const [service, setService] = useState([]);
     useEffect(() => {
-        fetch('https://creative-agency-jobayer.herokuapp.com/services')
+        fetch('https://dmediaworld.com/creative-agency/services')
             .then(res => res.json())
             .then(data => setService(data))
     }, []);

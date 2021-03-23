@@ -17,13 +17,22 @@ import Login from "./Components/Login/Login";
 import PriveteRoute from "./Components/Login/PrivateRoute";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import firebase from "firebase/app";
+import "firebase/auth";
+
 
 export const userContext = createContext();
 
 function App() {
   AOS.init();
-  const [logedInUser, setLogedInUser] = useState({});
+  const [logedInUser, setLogedInUser] = useState(null);
 
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      const currUser = user;
+      setLogedInUser(currUser);
+    }
+  });
   return (
     <userContext.Provider value={[logedInUser, setLogedInUser]}>
       <Router>

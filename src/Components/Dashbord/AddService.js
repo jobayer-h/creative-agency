@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddService = () => {
     return (
-        <form action="https://creative-agency-jobayer.herokuapp.com/addservice" method="post">
+        <form action="https://dmediaworld.com/creative-agency/addservice" method="post">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label htmlFor="title">Enter Title</label>

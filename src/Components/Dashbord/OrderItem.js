@@ -5,7 +5,7 @@ import OrderBox from './OrderBox';
 const OrderItem = () => {
     const [myOrder, setMyOrders] = useState([]);
     useEffect(() => {
-        fetch('https://creative-agency-jobayer.herokuapp.com/allorders?email=' + sessionStorage.getItem('email'))
+        fetch('https://dmediaworld.com/creative-agency/allorders?email=' + sessionStorage.getItem('email'))
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [])
