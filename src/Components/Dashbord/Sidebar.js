@@ -1,17 +1,18 @@
 import { faCommentDots, faList, faPlus, faShoppingCart, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { userContext } from '../../App';
 import logo from './../../resorces/logos/logo.png'
 import './Dashbord.css'
 const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
-
+    const [logedInUser, setLogedInUser] = useContext(userContext);
     useEffect(() => {
         fetch('https://dmediaworld.com/creative-agency/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ email: sessionStorage.getItem('email') })
+            body: JSON.stringify({ email: logedInUser.email })
         })
             .then(res => res.json())
             .then(data => setIsAdmin(data))
