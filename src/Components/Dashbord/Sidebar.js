@@ -9,7 +9,7 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
     const [logedInUser, setLogedInUser] = useContext(userContext);
     useEffect(() => {
-        fetch('https://dmediaworld.com/creative-agency/isAdmin', {
+        fetch('https://creative-agency-jobayer.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: logedInUser.email })

@@ -2,7 +2,7 @@ import React from 'react';
 
 const MakeAdmin = () => {
     return (
-        <form action="https://dmediaworld.com/creative-agency/addadmin" method="post">
+        <form action="https://creative-agency-jobayer.herokuapp.com/addadmin" method="post">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <input type="email" class="form-control" name="adminemail" id="" placeholder="Email" />
