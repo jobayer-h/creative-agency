@@ -39,5 +39,5 @@
     padding: 25px;
     margin: 10px;
     height: 300px;
-    overflow-y: scroll;
+    overflow: hidden;
 }
