@@ -15,7 +15,7 @@ const Footer = () => {
     return (
         <div className="y-bg" id="contact">
             <br /><br />
-            <div className="container">
+            <div className="container overflow-hidden">
                 <div className="row">
                     <div data-aos="fade-right"
                         data-aos-duration="1000"

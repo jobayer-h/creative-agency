@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="container">
                 <Navbar></Navbar>
                 <br /><br /><br />
-                <section className="row">
+                <section className="row overflow-hidden">
                     <div data-aos="fade-right"
                         data-aos-offset="300"
                         data-aos-duration="1000"
