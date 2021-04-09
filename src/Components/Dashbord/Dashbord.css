@@ -1,5 +1,4 @@
 .sidebar-logo{
-    width: 200px;
     margin: 20px 0;
 }
 .sidebar-logo img{
@@ -40,4 +39,12 @@
     margin: 10px;
     height: 300px;
     overflow: hidden;
+}
+
+.link:hover{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.link{
+    transition: 300ms;
 }

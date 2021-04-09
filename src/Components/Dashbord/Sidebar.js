@@ -1,12 +1,14 @@
-import { faCommentDots, faList, faPlus, faShoppingCart, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots, faList, faPlus, faShoppingCart, faSignOutAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { userContext } from '../../App';
+import { handleLogOut } from '../LendingPage/Hero/Navbar';
 import logo from './../../resorces/logos/logo.png'
 import './Dashbord.css'
 const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
+    // eslint-disable-next-line
     const [logedInUser, setLogedInUser] = useContext(userContext);
     useEffect(() => {
         fetch('https://creative-agency-jobayer.herokuapp.com/isAdmin', {
@@ -45,7 +47,7 @@ const Sidebar = () => {
                                 <li><Link className="link" to='/dashbord/review'><FontAwesomeIcon icon={faCommentDots} /> Review</Link></li>
                             </div>
                     }
-
+                    <li><Link onClick={handleLogOut} className="link" to='/'><FontAwesomeIcon icon={faSignOutAlt} /> Log Out</Link></li>
 
                 </ul>
             </div>

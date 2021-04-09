@@ -1,20 +1,20 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../../resorces/logos/logo.png'
 import { Twirl as Hamburger } from 'hamburger-react'
-import { userContext } from '../../../App';
 import firebase from "firebase/app";
 import "firebase/auth";
+
+export const handleLogOut = () => {
+    firebase.auth().signOut().then(() => {
+        window.location.reload()
+      }).catch((error) => {
+        console.log(error);
+      });
+}
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false)
-    const [loggedInUser, setLoggedInUser] = useContext(userContext);
-    const handleLogOut = () => {
-        firebase.auth().signOut().then(() => {
-            window.location.reload()
-          }).catch((error) => {
-            console.log(error);
-          });
-    }
+    
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">

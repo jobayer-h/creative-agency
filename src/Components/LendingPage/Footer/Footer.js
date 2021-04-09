@@ -7,10 +7,12 @@ const Footer = () => {
     
         emailjs.sendForm('service_4o7d5ay', 'template_gonw7ag', e.target, 'user_Zs2bMecKtP9m88IjMAhBI')
           .then((result) => {
-              alert('Success!')
+              document.contactForm.reset();
+              alert('Success!');
           }, (error) => {
               console.log(error.text);
           });
+          
       }
     return (
         <div className="y-bg" id="contact">
@@ -26,7 +28,7 @@ const Footer = () => {
                     <div data-aos="fade-left"
                         data-aos-duration="1000"
                         data-aos-easing="linear" className="col-md-6">
-                        <form onSubmit={sendEmail} action="">
+                        <form onSubmit={sendEmail} name="contactForm">
                             <input class="form-control" type="email" placeholder="Email" name="email" id="" />
                             <br />
                             <input class="form-control" type="text" name="name" placeholder="Name / Company Name" id="" />
