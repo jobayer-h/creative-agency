@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import ServiceBox from './ServiceBox';
-import serviceImg1 from './../../../resorces/icons/service1.png'
 import Spiner from './Spiner';
 const Services = () => {
     const [service, setService] = useState([]);
@@ -17,7 +16,7 @@ const Services = () => {
             <div className="row my-5">
                 {
                     service.length > 0 ?
-                        service.map(service => <ServiceBox img={serviceImg1} key={service._id} data={service}></ServiceBox>)
+                        service.map(service => <ServiceBox img={service.icon} key={service._id} data={service}></ServiceBox>)
                         :
                         <Spiner />
                 }

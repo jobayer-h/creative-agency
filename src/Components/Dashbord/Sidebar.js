@@ -4,8 +4,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { userContext } from '../../App';
 import { handleLogOut } from '../LendingPage/Hero/Navbar';
-import logo from './../../resorces/logos/logo.png'
-import './Dashbord.css'
+import logo from './../../resorces/logos/logo.png';
+import './Dashbord.css';
 const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
     // eslint-disable-next-line

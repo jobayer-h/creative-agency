@@ -5,14 +5,21 @@ const AddService = () => {
         e.preventDefault();
         const title = document.getElementById('title').value;
         const description = document.getElementById('description').value;
-        const data = {
-            title: title,
-            description:description
-        }
+        const icon = document.getElementById('icon').files[0];
+        const formData = new FormData();
+        formData.append('icon', icon)
+        formData.append('title', title)
+        formData.append('description', description)
+
+        // const data = {
+        //     title: title,
+        //     description:description,
+        //     icon:icon
+        // }
         fetch('https://creative-agency-jobayer.herokuapp.com/addservice',{
             method: 'POST',
-            headers: {"Content-type" : "application/json"},
-            body:JSON.stringify(data)
+            // headers: {"Content-type" : "application/json"},
+            body:formData
         }).then(response => response.json())
         .then(data => {
             if (data===true) {

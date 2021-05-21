@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Review from './Review';
-import userLogo from './../../../resorces/icons/user.svg'
 import Spiner from '../Services/Spiner';
+import userLogo from './../../../resorces/icons/user.svg';
+import Review from './Review';
 const Feedback = () => {
 
     const [review, setReview] = useState([]);
